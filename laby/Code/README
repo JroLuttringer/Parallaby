@@ -1,0 +1,53 @@
+Ce projet est à rendre sur la plateforme Moodle en utilisant le dépôt
+prévu pour cela. Vous rendrez une unique archive (au format .tar.gz ou
+.zip obligatoirement) dont le nom aura obligatoirement la forme
+NOM_Prenom.extension. Toutes fichiers qui constituent votre reponse
+commence avec un rappel de sujet sur lequel il répond et vous
+identifie avec votre nom.
+
+L’archive devra contenir un fichier rapport.txt (ou .pdf, ou .doc), où
+vous donnerez toute information que vous jugerez utile pour décrire
+votre projet, ainsi que les fichiers sources fournies et demandés
+incluant le fichier Makefile modifié pour les compiler. Vous veillerez
+à commenter soigneusement vos codes et à respecter le nommage demandé
+dans le sujet.
+
+Liste des fichiers présents dans cette archive :
+
+	chemin_lab.c : lit une fichier laby.lab et cherche le chemin le plus court
+	gen_lab.c : génère le labyrinthe et enregistre dans laby.lab
+	graph.c : bibliothèque graphique, source
+	graph.h : bibliothèque graphique, header
+	Makefile : makefile
+	README : ce fichier
+
+Sujet :
+
+ (0) Compilez et familiarisez-vous avec les deux programmes tels
+     qu'ils sont données.
+
+ (1) Parallélisez la génération de labyrinthe avec MPI. Votre fichier
+     source modifié s'appellera gen_lab_mpi.c. Décrivez et justifiez
+     vos choix d'implémentation.
+
+     La recherche de parcours dans le labyrinthe généré vous permet de
+     faire ces vérifications, même si l'affichage est désactivé lors
+     de la génération.
+
+ (2) Désactivez l'affichage et faites des mesures de performance sur
+     un architecture avec au moins 4 processeurs/cœurs indépendants.
+     Pour vérifier que l'accélération est bonne, différents tailles de
+     labyrinthes doivent être mesuré et ils doivent montrer une
+     progression importante. Documentez les résultats de vos mésures
+     dans un tableau et calculez les moyennes et l'écart type.
+
+ (3) Présentez vos résultats expérimentaux dans votre rapport:
+     décrivez-les et discutez le succès (ou pas) de votre
+     parallélisation.
+
+
+Note :
+8 pts : code MPI fonctionnel et correct
+4 pts : performance de votre programme
+4 pts : rapport & mesure de perf
+4 pts : qualité du code (lisibilité, terminaison propre, recouvrement calcul/comm)
